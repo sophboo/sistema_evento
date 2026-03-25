@@ -1,6 +1,6 @@
 <?php
 
-class ParticipanteModel
+class ParticipantesModel
 {
     private $pdo;
 

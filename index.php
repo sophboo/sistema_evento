@@ -17,25 +17,25 @@ session_start();
         </section>
 
         <?php
-        require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/DB/DataBase.php";
-        require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Controller/EventoController.php";
+        require_once "C:/Turma2/xampp/htdocs/sistema_evento/DB/DataBase.php";
+        require_once "C:/Turma2/xampp/htdocs/sistema_evento/Controller/EventoController.php";
 
-        $eventosController = new EventosController($pdo);
-        $eventosController->listar();
+        $EventoController = new EventoController($pdo);
+        $EventoController->listar();
         ?>
 
         <?php
-        require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Controller/ParticipantesController.php";
+        require_once "C:/Turma2/xampp/htdocs/sistema_evento/Controller/ParticipantesController.php";
 
-        $participantesController = new ParticipantesController($pdo);
-        $participantesController->listar();
+        $ParticipantesController = new ParticipantesController($pdo);
+        $ParticipantesController->listar();
         ?>
 
         <?php
-        require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Controller/InscricaoController.php";
+        require_once "C:/Turma2/xampp/htdocs/sistema_evento/Controller/InscricaoController.php";
 
-        $inscricaoController = new InscricaoController($pdo);
-        $inscricaoController->listar();
+        $InscricaoController = new InscricaoController($pdo);
+        $InscricaoController->listar();
         ?>
     </main>
 </body>

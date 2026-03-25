@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Model/InscricaoModel.php";
+require_once "C:/Turma2/xampp/htdocs/sistema_evento/Model/InscricaoModel.php";
 
 class InscricaoController {
 
@@ -15,6 +15,6 @@ class InscricaoController {
     public function listar() {
         $inscricoes = $this->model->listarInscricoes();
 
-        include_once "C:/Turma2/xampp/htdocs/eventos/Eventos/View/Inscricao/InscricaoListar.php";
+        include_once "C:/Turma2/xampp/htdocs/sistema_evento/View/Eventos/EventoListar.php";
     }
 }

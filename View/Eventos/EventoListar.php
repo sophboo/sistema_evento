@@ -2,13 +2,13 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/DB/DataBase.php";
-require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Controller/ParticipantesController.php";
-require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Controller/EventoController.php";
+require_once "C:/Turma2/xampp/htdocs/sistema_evento/DB/DataBase.php";
+require_once "C:/Turma2/xampp/htdocs/sistema_evento/Controller/ParticipantesController.php";
+require_once "C:/Turma2/xampp/htdocs/sistema_evento/Controller/EventoController.php";
 
 global $pdo;
 $ParticipantesController = new ParticipantesController($pdo);
-$EventosController = new EventosController($pdo);
+$EventoController = new EventoController($pdo);
 $mensagem = "";
 
 if (!isset($_SESSION['participante'])) {
@@ -20,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id_evento = $_POST['id_evento'];
     $id_participante = $_POST['id_participante'];
 
-    $inscrito = $ParticipantesController->verificarinscricao($id_evento, $id_participante);
-    $total = $EventosController->contarInscritos($id_evento);
-    $limite = $EventosController->buscarLimiteParticipantes($id_evento);
+    $inscrito = $ParticipanteController->verificarinscricao($id_evento, $id_participante);
+    $total = $EventoController->contarInscritos($id_evento);
+    $limite = $EventoController->buscarLimiteParticipantes($id_evento);
 
     if ($inscrito > 0) {
         $mensagem = "Voce ja esta inscrito neste evento";

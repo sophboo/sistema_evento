@@ -1,7 +1,7 @@
 <?php
 
-require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/DB/DataBase.php";
-require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Controller/ParticipantesController.php";
+require_once "C:\Turma2\xampp\htdocs\sistema_evento\DB\DataBase.php";
+require_once "C:\Turma2\xampp\htdocs\sistema_evento\Controller\ParticipantesController.php";
 
 $ParticipantesController = new ParticipantesController($pdo);
 

@@ -1,5 +1,5 @@
 <?php
-require_once "C:/Turma2/xampp/htdocs/eventos/Eventos/Model/EventoModel.php";
+require_once "C:/Turma2/xampp/htdocs/sistema_evento/Model/EventoModel.php";
 
 class EventoController {
     private $EventoModel;
@@ -12,7 +12,7 @@ class EventoController {
 
     public function listar() {
         $Eventos = $this->EventoModel->buscarTodos();
-        include_once "C:/Turma2/xampp/htdocs/eventos/Eventos/View/Eventos/EventoListar.php";
+        include_once "C:/Turma2/xampp/htdocs/sistema_evento/View/Eventos/EventoListar.php";
     }
 
     public function buscarEventos($id){
