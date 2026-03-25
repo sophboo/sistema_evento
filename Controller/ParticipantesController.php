@@ -43,9 +43,4 @@ class ParticipantesController {
     public function inscricao($id_evento, $id_participante){
         return $this->ParticipantesModel->inscricao($id_evento, $id_participante);
     }
-
-    public function listarInscricoes() {
-        $Inscricoes = $this->ParticipantesModel->buscarInscricoes();
-        include_once "C:/Turma2/xampp/htdocs/sistema_evento/View/Inscricao/InscricaoLista.php";
-    }
 }

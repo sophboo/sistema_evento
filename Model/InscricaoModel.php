@@ -14,7 +14,8 @@ class InscricaoModel {
                     ep.id,
                     e.evento,
                     p.nome,
-                    p.email
+                    p.email,
+                    e.data
                 FROM evento_participante ep
                 JOIN evento e ON ep.evento_id = e.id
                 JOIN participante p ON ep.participante_id = p.id";

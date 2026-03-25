@@ -12,9 +12,8 @@ class InscricaoController {
         $this->model = new InscricaoModel($pdo);
     }
 
-    public function listar() {
-        $inscricoes = $this->model->listarInscricoes();
-
-        include_once "C:/Turma2/xampp/htdocs/sistema_evento/View/Eventos/EventoListar.php";
-    }
+   public function listar() {
+    $Inscricoes = $this->model->listarInscricoes();
+    include_once "C:/Turma2/xampp/htdocs/sistema_evento/View/Inscricao/InscricaoLista.php";
+}
 }

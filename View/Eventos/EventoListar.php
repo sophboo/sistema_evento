@@ -84,5 +84,4 @@ foreach ($eventos as $evento) {
 
 echo "</table>";
 echo "</section>";
-
 ?>
