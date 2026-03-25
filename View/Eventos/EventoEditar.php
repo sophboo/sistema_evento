@@ -2,7 +2,7 @@
 require_once "C:/Turma2/xampp/htdocs/sistema_evento/DB/DataBase.php";
 require_once "C:/Turma2/xampp/htdocs/sistema_evento/Controller/EventoController.php";
 
-$EventosController = new EventosController($pdo);
+$EventoController = new EventoController($pdo);
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $local = $_POST['local'];
     $quantidade_participantes = $_POST['quantidade_participantes'];
 
-    $EventosController->editar($evento, $descricao, $data, $horario, $local, $quantidade_participantes, $id);
+    $EventoController->editar($evento, $descricao, $data, $horario, $local, $quantidade_participantes, $id);
     header('Location: ../../index.php');
     exit;
 }

@@ -11,7 +11,7 @@ class EventoController {
     }
 
     public function listar() {
-        $Eventos = $this->EventoModel->buscarTodos();
+        $eventos = $this->EventoModel->buscarTodos();
         include_once "C:/Turma2/xampp/htdocs/sistema_evento/View/Eventos/EventoListar.php";
     }
 

@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="email">E-mail</label>
                 <input type="email" name="email" placeholder="Digite seu email" required>
                 <button type="submit">Entrar</button>
-                <a class="button-link" href="View/Participantes/cadastrar.php">Criar conta</a>
+                <a class="button-link" href="View/Participante/ParticipanteCadastro.php">Criar conta</a>
             </form>
 
             <?php if ($mensagemErro !== ""): ?>

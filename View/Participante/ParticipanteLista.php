@@ -4,12 +4,12 @@ echo "<div class='hero'><h2>Participantes</h2><p>Gerencie os usuarios cadastrado
 
 if (empty($Participantes)) {
     echo "<p class='message'>Nenhum participante encontrado!</p>";
-    echo "<div class='toolbar'><a class='button-link' href='View/Participante/ParticipanteCadastrar.php'>Cadastrar</a></div>";
+    echo "<div class='toolbar'><a class='button-link' href='View/Participante/ParticipanteCadastro.php'>Cadastrar</a></div>";
     echo "</section>";
     return;
 }
 
-echo "<div class='toolbar'><a class='button-link' href='View/Participante/ParticipanteCadastrar.php'>Cadastrar</a></div>";
+echo "<div class='toolbar'><a class='button-link' href='View/Participante/ParticipanteCadastro.php'>Cadastrar</a></div>";
 echo "<table>";
 echo "<tr><th>ID</th><th>Nome</th><th>Email</th><th>Telefone</th><th>Acoes</th></tr>";
 

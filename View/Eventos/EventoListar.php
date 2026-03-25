@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id_evento = $_POST['id_evento'];
     $id_participante = $_POST['id_participante'];
 
-    $inscrito = $ParticipanteController->verificarinscricao($id_evento, $id_participante);
+    $inscrito = $ParticipantesController->verificarInscricao($id_evento, $id_participante);
     $total = $EventoController->contarInscritos($id_evento);
     $limite = $EventoController->buscarLimiteParticipantes($id_evento);
 
@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mensagem = "Erro ao cadastrar";
         }
     }
+
 }
 
 echo "<section class='table-card'>";
@@ -42,16 +43,15 @@ echo "<div class='hero'><h2>Eventos</h2><p>Escolha seu proximo evento e acompanh
 
 if (empty($eventos)) {
     echo "<p class='message'>Nenhum evento encontrado!</p>";
-    echo "<div class='toolbar'><a class='button-link' href='View/Eventos/EventosCadastrar.php'>Cadastrar</a></div>";
+    echo "<div class='toolbar'><a class='button-link' href='View/Eventos/EventoCadastrar.php'>Cadastrar</a></div>";
     echo "</section>";
-    return;
 }
 
 if ($mensagem !== "") {
     echo "<div class='message'>{$mensagem}</div>";
 }
 
-echo "<div class='toolbar'><a class='button-link' href='View/Eventos/cadastrar.php'>Cadastrar</a></div>";
+echo "<div class='toolbar'><a class='button-link' href='View/Eventos/EventoCadastrar.php'>Cadastrar</a></div>";
 echo "<table>";
 echo "<tr><th>ID</th><th>Evento</th><th>Descricao</th><th>Data</th><th>Horario</th><th>Local</th><th>Maximo</th><th>Acoes</th></tr>";
 
@@ -84,3 +84,5 @@ foreach ($eventos as $evento) {
 
 echo "</table>";
 echo "</section>";
+
+?>

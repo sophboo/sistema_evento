@@ -2,7 +2,7 @@
 require_once "C:/Turma2/xampp/htdocs/sistema_evento/DB/DataBase.php";
 require_once "C:/Turma2/xampp/htdocs/sistema_evento/Controller/EventoController.php";
 
-$EventosController = new EventosController($pdo);
+$EventoController = new EventoController($pdo);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $evento = $_POST['evento'];
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $local = $_POST['local'];
     $quantidade_participantes = $_POST['quantidade_participantes'];
 
-    if ($EventosController->cadastrar($evento, $descricao, $data, $horario, $local, $quantidade_participantes) === true) {
+    if ($EventoController->cadastrar($evento, $descricao, $data, $horario, $local, $quantidade_participantes) === true) {
         header('Location: ../../index.php');
         exit;
     } else {
